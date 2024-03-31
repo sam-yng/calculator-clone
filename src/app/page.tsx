@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import { Button } from "./components/Button";
 
 export default function Home() {
   return (
@@ -8,8 +9,8 @@ export default function Home() {
         className={classNames(
           "border-[0.5px]",
           "border-white",
-          "md:w-[14vw]",
-          "md:h-[34vh]",
+          "md:w-[15%]",
+          "md:h-[36vh]",
           "top-0",
           "bottom-0",
           "left-0",
@@ -26,42 +27,35 @@ export default function Home() {
             "grid-cols-4",
             "grid",
             "gap-0.5",
-            "md:w-[14vw]",
-            "md:h-[34vh]",
+            "md:w-auto",
+            "md:h-[36vh]",
             "p-1",
             "h-full",
+            "text-xl",
           )}
         >
           <div className={classNames("col-span-4", "text-right", "mr-3")}>
-            <h1 className={classNames("text-2xl", "mt-1")}>0</h1>
+            <h1 className={classNames("text-2xl", "mt-2")}>0</h1>
           </div>
-          <button className={classNames("bg-grey-calc", "bg-opacity-55")}>
-            AC
-          </button>
-          <button className={classNames("bg-grey-calc", "bg-opacity-55")}>
-            +/-
-          </button>
-          <button className={classNames("bg-grey-calc", "bg-opacity-55")}>
-            %
-          </button>
-          <button className={classNames("bg-orange-calc")}>÷</button>
-          <button className={classNames("bg-grey-calc")}>7</button>
-          <button className={classNames("bg-grey-calc")}>8</button>
-          <button className={classNames("bg-grey-calc")}>9</button>
-          <button className={classNames("bg-orange-calc")}>x</button>
-          <button className={classNames("bg-grey-calc")}>4</button>
-          <button className={classNames("bg-grey-calc")}>5</button>
-          <button className={classNames("bg-grey-calc")}>6</button>
-          <button className={classNames("bg-orange-calc")}>-</button>
-          <button className={classNames("bg-grey-calc")}>1</button>
-          <button className={classNames("bg-grey-calc")}>2</button>
-          <button className={classNames("bg-grey-calc")}>3</button>
-          <button className={classNames("bg-orange-calc")}>+</button>
-          <button className={classNames("col-span-2", "bg-grey-calc")}>
-            0
-          </button>
-          <button className={classNames("bg-grey-calc")}>.</button>
-          <button className={classNames("bg-orange-calc")}>=</button>
+          <Button value={"AC"} color="bg-grey-calc" opacity />
+          <Button value={"+/-"} color="bg-grey-calc" opacity />
+          <Button value={"%"} color="bg-grey-calc" opacity />
+          <Button value={"÷"} color="bg-orange-calc" />
+          <Button value={7} color="bg-grey-calc" />
+          <Button value={8} color="bg-grey-calc" />
+          <Button value={9} color="bg-grey-calc" />
+          <Button value={"x"} color="bg-orange-calc" />
+          <Button value={4} color="bg-grey-calc" />
+          <Button value={5} color="bg-grey-calc" />
+          <Button value={6} color="bg-grey-calc" />
+          <Button value={"-"} color="bg-orange-calc" />
+          <Button value={1} color="bg-grey-calc" />
+          <Button value={2} color="bg-grey-calc" />
+          <Button value={3} color="bg-grey-calc" />
+          <Button value={"+"} color="bg-orange-calc" />
+          <Button value={0} color="bg-grey-calc" span />
+          <Button value={"."} color="bg-grey-calc" />
+          <Button value={"="} color="bg-orange-calc" />
         </div>
       </div>
     </main>
