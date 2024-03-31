@@ -6,6 +6,7 @@ type ButtonProps = {
   color: "bg-orange-calc" | "bg-grey-calc";
   opacity?: boolean;
   span?: boolean;
+  handleChange?: () => void;
 };
 
 export const Button: React.FC<ButtonProps> = ({
@@ -14,6 +15,17 @@ export const Button: React.FC<ButtonProps> = ({
   opacity,
   span,
 }) => {
+  // const { dispatch, currentCalculatorValue } = useCalculator();
+
+  // const handleCalculatorValueChange = () => {
+  //   if (Number.isInteger(value)) {
+  //     dispatch(
+  //       changeCalculatorValue({ state: currentCalculatorValue, action: value }),
+  //     );
+  //     console.log(currentCalculatorValue);
+  //   }
+  // };
+
   return (
     <button
       value={value}
