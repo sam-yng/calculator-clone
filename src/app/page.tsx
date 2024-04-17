@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import { Button } from "./components/Button";
+import { Value } from "./components/Value";
 
 export default function Home() {
   return (
@@ -35,27 +36,27 @@ export default function Home() {
           )}
         >
           <div className={classNames("col-span-4", "text-right", "mr-3")}>
-            <h1 className={classNames("text-2xl", "mt-2")}>0</h1>
+            <Value />
           </div>
-          <Button value={"AC"} color="bg-grey-calc" opacity />
-          <Button value={"+/-"} color="bg-grey-calc" opacity />
-          <Button value={"%"} color="bg-grey-calc" opacity />
-          <Button value={"÷"} color="bg-orange-calc" />
+          <Button text={"AC"} color="bg-grey-calc" opacity />
+          <Button text={"+/-"} color="bg-grey-calc" opacity />
+          <Button text={"%"} color="bg-grey-calc" opacity />
+          <Button text={"÷"} color="bg-orange-calc" />
           <Button value={7} color="bg-grey-calc" />
           <Button value={8} color="bg-grey-calc" />
           <Button value={9} color="bg-grey-calc" />
-          <Button value={"x"} color="bg-orange-calc" />
+          <Button text={"x"} color="bg-orange-calc" />
           <Button value={4} color="bg-grey-calc" />
           <Button value={5} color="bg-grey-calc" />
           <Button value={6} color="bg-grey-calc" />
-          <Button value={"-"} color="bg-orange-calc" />
+          <Button text={"-"} color="bg-orange-calc" />
           <Button value={1} color="bg-grey-calc" />
           <Button value={2} color="bg-grey-calc" />
           <Button value={3} color="bg-grey-calc" />
-          <Button value={"+"} color="bg-orange-calc" />
+          <Button text={"+"} color="bg-orange-calc" />
           <Button value={0} color="bg-grey-calc" span />
-          <Button value={"."} color="bg-grey-calc" />
-          <Button value={"="} color="bg-orange-calc" />
+          <Button text={"."} color="bg-grey-calc" />
+          <Button text={"="} color="bg-orange-calc" />
         </div>
       </div>
     </main>

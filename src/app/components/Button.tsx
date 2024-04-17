@@ -1,12 +1,15 @@
+"use client";
 import React from "react";
 import classNames from "classnames";
+import { setValue } from "@/lib/features/calculatorSlice";
+import { useAppDispatch } from "@/lib/hooks";
 
 type ButtonProps = {
-  value: number | string;
+  value?: number;
   color: "bg-orange-calc" | "bg-grey-calc";
   opacity?: boolean;
   span?: boolean;
-  handleChange?: () => void;
+  text?: string;
 };
 
 export const Button: React.FC<ButtonProps> = ({
@@ -14,17 +17,9 @@ export const Button: React.FC<ButtonProps> = ({
   color,
   opacity,
   span,
+  text,
 }) => {
-  // const { dispatch, currentCalculatorValue } = useCalculator();
-
-  // const handleCalculatorValueChange = () => {
-  //   if (Number.isInteger(value)) {
-  //     dispatch(
-  //       changeCalculatorValue({ state: currentCalculatorValue, action: value }),
-  //     );
-  //     console.log(currentCalculatorValue);
-  //   }
-  // };
+  const dispatch = useAppDispatch();
 
   return (
     <button
@@ -34,8 +29,9 @@ export const Button: React.FC<ButtonProps> = ({
         opacity && "bg-opacity-55",
         span && "col-span-2",
       )}
+      onClick={() => dispatch(setValue(value!))}
     >
-      {value}
+      {text ? text : value}
     </button>
   );
 };
